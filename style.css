@@ -406,6 +406,10 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 20px;
+	font-size: 1.8rem;
+	font-weight: 500;
+
+
 }
 #about .col-left {
 	width: 250px;
@@ -433,7 +437,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 10px solid white;
+	border: 10px solid rgb(26, 26, 26);
 }
 #about .col-left .about-img::after {
 	content: '';
