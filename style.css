@@ -25,7 +25,7 @@ img {
 	object-fit: cover;
 }
 p {
-	color: rgb(10, 2, 2);
+	color: rgb(5, 94, 138);
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -42,7 +42,7 @@ p {
 	text-align: center;
 }
 .section-title span {
-	color: rgb(46, 134, 166);
+	color: rgb(5, 94, 138);
 }
 
 .cta {
@@ -50,7 +50,7 @@ p {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid rgb(8, 45, 61);
+	border: 2px solid rgb(5, 94, 138);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -60,7 +60,7 @@ p {
 }
 .cta:hover {
 	color: white;
-	background-color: rgb(67, 143, 179);
+	background-color: rgb(1, 2, 3);
 }
 .brand h1 {
 	font-size: 3rem;
@@ -68,7 +68,7 @@ p {
 	color: white;
 }
 .brand h1 span {
-	color: rgb(70, 152, 190);
+	color: rgb(5, 94, 138);
 }
 
 /* Header section */
@@ -97,7 +97,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: rgb(23, 96, 113);
+	background-color: rgb(0, 0, 0);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -140,7 +140,7 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: rgb(177, 177, 177);
+	color: rgb(5, 94, 138);
 }
 #header .hamburger {
 	height: 60px;
@@ -199,72 +199,179 @@ p {
 /* End Header section */
 
 /* Hero Section */
+/* Hero Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
-	background-size: cover;
-	background-position: top center;
-	position: relative;
-	z-index: 1;
+    background-image: url(./img/hero-bg.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    background-color: black; /* Change this line to set the background color */
 }
 #hero::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgb(0, 22, 31);
-	opacity: 0.7;
-	z-index: -1;
-}
-#hero .hero {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.7); /* Keep this line if you want a semi-transparent overlay */
+    z-index: -1;
 }
 #hero h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
-}
-#hero h1:nth-child(1) {
-	animation-delay: 1s;
-}
-#hero h1:nth-child(2) {
-	animation-delay: 2s;
-}
-#hero h1:nth-child(3) {
-	animation: text_reveal_name 0.5s ease forwards;
-	animation-delay: 3s;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
 }
 #hero h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: rgb(7, 43, 59);
-	animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: black; /* Change this line to set the background color */
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
 }
 #hero h1:nth-child(1) span {
-	animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 #hero h1:nth-child(2) span {
-	animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 #hero h1:nth-child(3) span {
-	animation-delay: 2.5s;
+    animation-delay: 2.5s;
 }
-
-/* End Hero Section */
-
-/* Services Section */
+/* Add this to your existing CSS */
+.hero-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+  }
+  
+  .hero-text {
+	flex-basis: 30%; /* Adjust as needed */
+  }
+  
+  .hero-image img {
+	width: 300px; /* Adjust the size as needed */
+	 /* Optional: Make it a circular image */
+  }
+  #my-achievements img {
+	color: white;
+	margin-bottom: 20px; /* Adjust margin as needed */
+	border-bottom: 2px solid white; /* Add a white line beneath the image */
+  }
+  
+  #my-achievements .achievements-body:first-child {
+	border: 2px solid white;
+	padding: 10px; /* Adjust padding as needed */
+	border-radius: 8px; /* Adjust border radius as needed */
+	margin-bottom: 20px; /* Adjust margin as needed */
+  }
+  
+  
+  #my-achievements .achievements-body {
+	margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  #my-achievements .certificate-image {
+	max-width: 100%;
+	height: auto;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  #my-achievements .certificate-image:hover {
+	transform: scale(1.2);
+  }
+  
+  #my-achievements {
+	background-color: #000; /* Background color for the achievements section */
+	padding: 50px 0; /* Adjust the top and bottom padding as needed */
+	text-align: center; /* Align text to the center */
+  }
+  
+  #my-achievements .achievements {
+	max-width: 2px;
+	margin: 0 auto;
+	padding: 20px; /* Adjust the padding as needed */
+  }
+  
+  #my-achievements .section-title {
+	font-size: 7rem; /* Adjust the font size as needed */
+	color: white;
+  }
+  
+  #my-achievements .achievements-body {
+	font-size: 18px; /* Adjust the font size as needed */
+	color: white;
+  }
+  
+/* Publications Section */
+#publications {
+	background-image: linear-gradient(60deg, #000000 0%, #0c0c0c 100%);
+	padding: 10px 0; /* Adjust the top and bottom padding as needed */
+  }
+  
+  #publications .publications {
+	flex-direction: column;
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 10px; /* Adjust the padding as needed */
+  }
+  /* Publications Section */
+#publications .section-title {
+	font-size: 7rem; /* Adjust the font size as needed */
+	color: white; /* Set the text color to white */
+  }
+  
+  #publications h1.section-title {
+	color: white; /* Set the text color to white */
+  }
+  /* End Publications Section */
+  
+  
+  
+  #publications .publications-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+  
+  #publications .publication-item {
+	width: 75%; /* Adjust the width as needed */
+	margin: 15px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: rgb(221, 226, 228);
+  }
+  
+  #publications .publication-item h2 {
+	font-size: 1.8rem; /* Adjust the font size as needed */
+  }
+  
+  #publications .publication-item p {
+	font-size: 1.2rem; /* Adjust the font size as needed */
+	margin-bottom: 10px;
+  }
+  /* End Publications Section */
+  #my-achievements img {
+	max-width: 100%;
+	height: auto;
+	cursor: pointer; /* Set cursor to pointer to indicate it's clickable */
+	transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+  }
+  
+  #my-achievements img:hover {
+	transform: scale(1.2); /* Increase the size on hover (adjust the scale factor as needed) */
+  }
+  
 #services .services {
 	flex-direction: column;
 	text-align: center;
@@ -305,7 +412,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #000000 0%, #090909 100%);
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -360,7 +467,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #000000 0%, #171717 100%);
 	color: white;
 }
 #projects .project-info h1 {
@@ -388,7 +495,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #000000 0%, #0d0d0c 100%);
 	opacity: 0.7;
 }
 #projects .project-img img {
@@ -400,55 +507,49 @@ p {
 /* End Projects section */
 
 /* About Section */
+/* About Section */
 #about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-	font-size: 1.8rem;
-	font-weight: 500;
-
-
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    font-size: 2rem; /* Increase the font size */
+    font-weight: 500;
+    color: black; /* Change the text color to black */
 }
+
 #about .col-left {
-	width: 250px;
-	height: 360px;
+    width: 250px;
+    height: 360px;
 }
+
 #about .col-right {
-	width: 100%;
+    width: 100%;
 }
+
 #about .col-right h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	margin-bottom: 10px;
+    font-size: 2.5rem; /* Increase the font size */
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+    color: rgb(5, 94, 138); /* Change the heading color if needed */
 }
+
 #about .col-right p {
-	margin-bottom: 20px;
+    font-size: 1.6rem; /* Increase the font size */
+    color: black; /* Change the text color to black */
+    margin-bottom: 20px;
 }
+
 #about .col-right .cta {
-	color: black;
-	margin-bottom: 50px;
-	padding: 10px 20px;
-	font-size: 2rem;
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2.5rem; /* Increase the font size */
 }
-#about .col-left .about-img {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	border: 10px solid rgb(26, 26, 26);
-}
-#about .col-left .about-img::after {
-	content: '';
-	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
-	border: 7px solid rgb(40, 136, 168);
-	z-index: -1;
-}
+/* End About Section */
+
 /* End About Section */
 
 /* contact Section */
@@ -498,7 +599,7 @@ p {
 
 /* Footer */
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #000000 0%, #0c0c0c 100%);
 }
 #footer .footer {
 	min-height: 200px;
@@ -564,7 +665,7 @@ p {
 }
 @keyframes text_reveal_name {
 	100% {
-		color: rgba(153, 205, 214, 0.758);
+		color: rgb(5, 94, 138);
 		font-weight: 800;
 	}
 }
@@ -628,7 +729,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(40, 136, 168);
+		border: 10px solid rgb(5, 94, 138);
 	}
 	#about .col-right {
 		text-align: left;
