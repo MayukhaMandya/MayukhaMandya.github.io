@@ -110,19 +110,23 @@ p {
 	overflow-x: hidden;
 	transition: 0.5s ease left;
 }
+
 #header .nav-list ul.active {
 	left: 0%;
 }
+
 #header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
+	font-size: 1rem; /* Reduced font size */
+	font-weight: 400; /* Optional: Adjusted font weight */
+	letter-spacing: 0.1rem; /* Reduced letter spacing */
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding: 20px;
+	padding: 10px; /* Reduced padding */
 	display: block;
+	position: relative; /* Needed for positioning ::after pseudo-element */
 }
+
 #header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
@@ -130,11 +134,12 @@ p {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	color: rgb(0, 0, 0);
-	font-size: 13rem;
-	letter-spacing: 50px;
+	font-size: 4rem; /* Reduced font size for pseudo-element */
+	letter-spacing: 10px; /* Reduced letter spacing */
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
 }
+
 #header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
 	letter-spacing: initial;
@@ -463,6 +468,127 @@ p {
 }
 /* End Services Section */
 
+/* Portfolio section */
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  /* Container for all portfolio items */
+  .all-portfolios {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px; /* Space between items */
+	justify-content: center;
+  }
+  
+  /* Individual portfolio item */
+  .portfolio-item {
+	width: calc(33.333% - 20px); /* Adjust for margin/gap */
+	box-shadow: 0 4px 8px rgba(18, 17, 17, 0.1);
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border: 2px solid #080707; /* Border for separation */
+  }
+  
+  /* Portfolio image styling */
+  .portfolio-img img {
+	width: 100%;
+	height: 200px; /* Fixed height for uniformity */
+	object-fit: cover; /* Ensure image covers the area */
+  }
+  
+  /* Portfolio info styling */
+  .portfolio-info {
+	padding: 20px;
+	flex: 1; /* Allows info section to grow and fill space */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+  
+  /* Font color for portfolio titles */
+  .portfolio-info h1 {
+	color: #124375; /* Change to desired color */
+	font-size: 3.0em; /* Adjust font size as needed */
+	text-align: center; /* Center align the heading */
+	margin: 0; /* Remove default margin */
+  }
+  
+  /* Font color for portfolio description */
+  .portfolio-info p {
+	color: #0b0b0b; /* Change to desired color */
+  }
+  
+  /* Font color for GitHub links */
+  .portfolio-item .portfolio-info a {
+	text-decoration: none;
+	color: #007bff; /* Change to desired color for GitHub links */
+  }
+  
+  /* Remove border from last item in each row */
+  .all-portfolios .portfolio-item:nth-child(3n) {
+	border-right: none; /* Remove border from the last item in each row */
+  }
+  
+  /* Remove border from items */
+  .portfolio-item:not(:last-child) {
+	border-right: 1px solid #080808; /* Border to the right of items */
+  }
+  
+/* Style for the publication link */
+.publication-link {
+	display: inline-block;
+	margin-top: 10px; /* Space above the icon */
+	text-decoration: none; /* Remove underline from link */
+  }
+  
+  .publication-link i {
+	transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .publication-link:hover i {
+	color: #0056b3; /* Change color on hover */
+  }
+/* Container for icons */
+.icons-container {
+	display: flex;
+	gap: 15px; /* Space between icons */
+	margin-top: 10px; /* Space above the icons */
+	align-items: center; /* Vertically center the icons */
+  }
+  
+  /* Style for icon links */
+  .icon-link {
+	text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Icon size and color */
+  .icon-link i {
+	font-size: 34px; /* Adjust icon size */
+	color: #333; /* Default icon color */
+	transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  /* Icon hover effect */
+  .icon-link:hover i {
+	color: #007bff; /* Change color on hover */
+  }
+  
+  /* Specific color for GitHub icon */
+  .icon-link[href*="github.com"] i {
+	color: rgb(1, 0, 2); /* Color for GitHub icon */
+  }
+  
+  /* Specific color for Publication icon */
+  .icon-link[href*="example.com"] i {
+	color: #1866b8; /* Color for Publication icon */
+  }
+  
 /* Projects section */
 #projects .projects {
 	flex-direction: column;
@@ -487,7 +613,7 @@ p {
 	width: 80%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 #projects .project-info {
 	padding: 30px;
@@ -537,7 +663,6 @@ p {
 /* End Projects section */
 
 /* About Section */
-/* About Section */
 #about .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -580,7 +705,81 @@ p {
 }
 /* End About Section */
 
-/* End About Section */
+/* Publications Section */
+#publications {
+	padding: 50px 0;
+	background-color: #e1d7d7; /* Background color */
+	text-align: center;
+  }
+  
+  .publications-header {
+	margin-bottom: 30px;
+  }
+  
+  .section-title {
+	font-size: 2.5rem; /* Increased font size */
+	color: #111010;
+	margin: 0;
+  }
+  
+  .publications-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Two columns for larger screens */
+	gap: 20px;
+	justify-content: center;
+  }
+  
+  .publication-item {
+	background-color: #ffffff; /* Card background color */
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 30px; /* Increased padding */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: left;
+	position: relative;
+  }
+  
+  .publication-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px; /* Horizontal border thickness */
+	background-color: #ddd; /* Border color */
+	z-index: 1;
+  }
+  
+  .publication-title {
+	font-size: 1.75rem; /* Increased font size */
+	color: #0c0c0c;
+	margin-bottom: 10px;
+  }
+  
+  .publication-details p {
+	font-size: 1.2rem; /* Increased font size for details */
+  }
+  
+  .publication-links {
+	margin-top: 15px;
+  }
+  
+  .publication-icon {
+	text-decoration: none;
+	color: #0a0a0a;
+	font-size: 28px; /* Increased icon size */
+	margin-right: 15px;
+  }
+  
+  .publication-icon:hover {
+	color: #0a0a0a;
+  }
+  
+  .abstract-content {
+	margin-top: 15px;
+	color: #333;
+  }
+  
 
 /* contact Section */
 #contact .contact {
@@ -627,6 +826,107 @@ p {
 }
 /*End contact Section */
 
+/* Education Section */
+#education {
+	padding: 50px 0;
+	background-color: #f9f9f9;
+	text-align: center; /* Center the title */
+  }
+  
+  .education-header {
+	margin-bottom: 30px;
+  }
+  
+  .section-title {
+	font-size: 2rem;
+	color: #333;
+	margin: 0;
+  }
+  
+  .timeline {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center the timeline */
+	position: relative;
+	max-width: 900px; /* Set max-width for better alignment */
+	margin: 0 auto; /* Center horizontally */
+  }
+  
+  .timeline::before {
+	content: '';
+	position: absolute;
+	width: 2px;
+	background-color: #3a6491;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	margin-bottom: 40px;
+  }
+  
+  .timeline-content {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Ensure full width within max-width */
+	max-width: 800px; /* Constrain item width */
+	position: relative;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+	margin-left: 50%;
+	border-color: #4d7198;
+	transform: translateX(-50%);
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+	margin-right: 50%;
+	border-color: #6185ab;
+	transform: translateX(50%);
+  }
+  
+  .timeline-content h2 {
+	font-size: 1.7rem;
+	color: #0e0d0d;
+	margin-bottom: 5px;
+  }
+  
+  .timeline-content h3 {
+	font-size: 1.3rem;
+	color: #070707;
+	margin-bottom: 10px;
+  }
+  
+  .timeline-content p {
+	font-size: 1,.5rem;
+	color: #010101;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.timeline-content {
+	  width: 100%;
+	  margin-left: 0;
+	  margin-right: 0;
+	}
+	
+	.timeline-item:nth-child(odd) .timeline-content,
+	.timeline-item:nth-child(even) .timeline-content {
+	  margin-left: 0;
+	  margin-right: 0;
+	  transform: none; /* Remove transform for small screens */
+	}
+  }
+  
 /* Footer */
 #footer {
 	background-image: linear-gradient(60deg, #000000 0%, #0c0c0c 100%);
