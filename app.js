@@ -1,25 +1,48 @@
-const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
-const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
-const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-const header = document.querySelector('.header.container');
+// Smooth panel navigation
+const buttons = document.querySelectorAll('.toggle-btn');
+const panels = document.querySelectorAll('.panel');
 
-hamburger.addEventListener('click', () => {
-	hamburger.classList.toggle('active');
-	mobile_menu.classList.toggle('active');
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-target');
+    const targetPanel = document.getElementById(targetId);
+
+    // Hide all panels
+    panels.forEach(panel => panel.classList.remove('active'));
+
+    // Show selected panel
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  if (details.style.display === "block") {
+    details.style.display = "none";
+    button.textContent = "More Details ⬇";
+  } else {
+    details.style.display = "block";
+    button.textContent = "Less Details ⬆";
+  }
+}
+// === GALLERY FILTER FUNCTIONALITY ===
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
 
-document.addEventListener('scroll', () => {
-	var scroll_position = window.scrollY;
-	if (scroll_position > 250) {
-		header.style.backgroundColor = '#29323c';
-	} else {
-		header.style.backgroundColor = 'transparent';
-	}
-});
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
 
-menu_item.forEach((item) => {
-	item.addEventListener('click', () => {
-		hamburger.classList.toggle('active');
-		mobile_menu.classList.toggle('active');
-	});
+    galleryItems.forEach(item => {
+      if (filter === 'all' || item.classList.contains(filter)) {
+        item.classList.remove('hide');
+      } else {
+        item.classList.add('hide');
+      }
+    });
+  });
 });

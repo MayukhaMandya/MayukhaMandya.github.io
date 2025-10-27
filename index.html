@@ -1,318 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Mayukha</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayukha Mandya Ammangatambu</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Header -->
-  <!-- Navigation Section -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>M</span>ayukha <span>M.</span>A.</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#portfolio" data-after="Portfolio">Portfolio</a></li>
-            <li><a href="#education" data-after="Education">Education</a></li>
-            <li><a href="#publications" data-after="Publications">Publications</a></li>
-            <li><a href="#my-achievements" data-after="Achievements">Achievements</a></li>
-            <li><a href="#resume" data-after="Resume">Resume</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="top-buttons">
+      <button class="toggle-btn" data-target="about">About Me</button>
+      <button class="toggle-btn" data-target="contact">Contact Me</button>
+      <button class="toggle-btn" data-target="timeline">My Timeline</button>
+      <button class="toggle-btn" data-target="gallery">View Visualization Gallery</button>
+      <button class="toggle-btn" data-target="projects">View Projects</button>
+      <button class="toggle-btn" data-target="resume">View Resume</button>
     </div>
-  </section>
-  <!-- End Header -->
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Hello, <span></span></h1>
-          <h1>My Name is <span></span></h1>
-          <h1>Mayukha <span></span></h1>
-          <a href="#projects" type="button" class="cta">my work</a>
-        </div>
-        <div class="hero-image">
-          <img src="./img/profile.png" alt="img">
-        </div>
-      </div>
+    <div class="hero-content">
+      <h1>Mayukha Mandya Ammangatambu</h1>
+      <h2>CS Grad Student · Data Scientist · Medical AI Researcher</h2>
+    </h3>Actively seeking New grad opportunities from May 2026.I'm on my F1 visa now and would require sponsorship after two years</h3>
+      <p class="tagline">Like AI models, humans need explainability.</p>
     </div>
-  </section>
-  <!-- End Hero Section -->
+  </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <p>Hi! I am an incoming master's student in Computer Science at the University of Utah, driven by a passion for leveraging technology to solve real-world problems. My primary areas of interest include sports analytics in computer vision, explainable AI, and deep learning. I am particularly focused on developing AI solutions for healthcare in remote areas with limited resources, aiming to make a meaningful impact in these underserved communities.
-          Beyond academics and research, I am deeply fascinated by the intersection of data science and practical applications, constantly exploring new ways to push the boundaries of what's possible. When I'm not working on my projects, I enjoy listening to the podcast "Linear Digressions," which provides insightful discussions on the latest advancements and trends in data science and machine learning. Explore my portfolio to learn more about my work.
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- About -->
+    <section id="about" class="panel">
+      <h3>About Me</h3>
+      <div class="about">
+        <p>
+          Hi! I’m Mayukha. I moved to the U.S. from India to pursue my Master’s in Computer Science at the University of Utah — and to see if I could survive both graduate school and Utah winters (spoiler: so far, so good). Right now, I’m interning as a Bank Data Scientist at BMW Financial Services, working with the Credit Department on loan model optimization and regulatory compliance. Alongside that, I’m a Research Assistant at the Scientific Computing and Imaging Institute, where I build interpretable ML models for medical imaging — because AI should be explainable, not mysterious like the Spotify algorithm.
+        </p>
+        <p>
+          I interned at Maverik Inc. as an IT QA Analyst during the summer, and before that, I completed my undergrad in India, where I worked on deep learning models for TB detection — one of those projects even won Best Paper and got published! I love working at the intersection of machine learning, real-world impact, and explainability. My career goal is to develop trustworthy AI systems that address high-stakes problems in finance, healthcare, or other areas where decisions have the greatest impact. I’m especially interested in models that aren't just accurate, but also accountable — and I care a lot about making complex things understandable (whether it's a neural network or a Netflix recommendation).
+        </p>
+        <p>
+          Outside of my technical life, I’m a bit of a domestic maximalist. I genuinely enjoy cooking, organizing everything from closets to code, and delivering dramatic, overly analytical reviews of food and movies no one asked for. I like systems that work — whether it's a clean ML pipeline or a spice rack sorted by color, cuisine, and emotional significance.
         </p>
       </div>
-    </div>
-  </section>
-  <!-- End About Section -->
+    </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <div class="portfolio container">
-    <div class="portfolio-header">
-      <h1 class="section-title"><span>Portfolio</span></h1>
-    </div>
-    <div class="all-portfolios">
-      <div class="portfolio-item">
-        <div class="portfolio-info">
-          <h1>Optimal Sequential AlexNet (OSAN) for Tuberculosis Classification</h1>
-          <p>Developed a customized deep learning algorithm built on the traditional AlexNet. The neural network achieved an accuracy of 99.6% and a Cohen's Kappa score of 0.98 in classifying Tuberculosis-infected chest X-rays.</p>
-          <!-- Icons Container -->
-          <div class="icons-container">
-            <!-- GitHub Link -->
-            <a href="https://github.com/MayukhaMandya/OSAN" title="View GitHub Repo" class="icon-link">
-              <i class="fa fa-github"></i>
-            </a>
-            <!-- Publication Link -->
-            <a href="https://journal.uob.edu.bh/handle/123456789/5370" title="View Publication" class="icon-link">
-              <i class="fa fa-file-text"></i>
-            </a>
+     <!-- Contact -->
+    <section id="contact" class="panel">
+      <h3>Contact</h3>
+      <p>I’m actively exploring new opportunities — if you think there’s a fit, I’d love to connect.</p>
+      <div class="contact-links">
+        <a href="mailto:mandya.mayukha@gmail.com" class="contact-icon" target="_blank">📧 Gmail</a>
+        <a href="https://www.linkedin.com/in/mayukha-mandya/" class="contact-icon" target="_blank">💼 LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=LCYljK4AAAAJ&hl=en" class="contact-icon" target="_blank">📚 Google Scholar</a>
+        <a href="https://calendly.com/mandya-mayukha" class="contact-icon" target="_blank">📅 Book a Meeting</a>
+      </div>
+    </section>
+  </main>
+  <!-- Timeline -->
+    <section id="timeline" class="timeline-section">
+      <h3>My Timeline</h3>
+      <div class="timeline-badges">
+        <div class="badge green">
+          <div class="lanyard-v">
+            <span class="thread left-thread"></span>
+            <span class="thread right-thread"></span>
+          </div>
+          <div class="v-tab"></div>
+          <div class="clip-circle"></div>
+          <div class="badge-card">
+            <img src="img/bmw.png" alt="BMW Logo" />
+            <h4>2025</h4>
+            <p>Bank Data Scientist Intern</p>
           </div>
         </div>
+        <div class="badge orange">
+          <div class="lanyard-v">
+            <span class="thread left-thread"></span>
+            <span class="thread right-thread"></span>
+          </div>
+          <div class="v-tab"></div>
+          <div class="clip-circle"></div>
+          <div class="badge-card">
+            <img src="img/mav.png" alt="Maverik Logo" />
+            <h4>2025</h4>
+            <p>IT QA Analyst Intern</p>
+          </div>
+        </div>
+
+        <div class="badge yellow">
+          <div class="lanyard-v">
+            <span class="thread left-thread"></span>
+            <span class="thread right-thread"></span>
+          </div>
+          <div class="v-tab"></div>
+          <div class="clip-circle"></div>
+          <div class="badge-card">
+            <img src="img/sci.png" alt="SCI Logo" />
+            <h4>2025</h4>
+            <p>Research Assistant</p>
+          </div>
+        </div>
+
         
-        <div class="portfolio-img">
-          <img src="./img/img-8.png" alt="OSAN Image">
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <div class="portfolio-info">
-          <h1>Bone Fracture Classification on Musculoskeletal (MURA) Dataset</h1>
-          <p>Developed a bone fracture classification system on the MURA dataset - Stanford ML group. Customized the architecture of InceptionResNetV2 neural network by adding sequential layers.</p>
-        </div>
-        <div class="portfolio-img">
-          <img src="./img/img-9.png" alt="Bone Fracture Classification Image">
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <div class="portfolio-info">
-          <h1>Early Cerebral Disease Detection</h1>
-          <p>A Python implementation of a pose estimation model using BlazePose MediaPipe. The model takes input from the webcam or a video file, calculates angles of the body joints, and displays the stage as either "normal" or "affected" depending on the threshold angle. The model also displays the frames per second (FPS) of the video.</p>
-          <a href="https://github.com/MayukhaMandya/Cerebral-Disease-Deetection-.git" title="My GitHub Repo">
-            <i class="fa fa-github" style="font-size:34px;color:rgb(1, 0, 2)"></i>
-          </a>
-        </div>
-        <div class="portfolio-img">
-          <img src="./img/i.png" alt="Cerebral Disease Detection Image">
-        </div>
-      </div>
-      <div class="portfolio-item">
-        <div class="portfolio-info">
-          <h1>Gender Classification with YOLOv7</h1>
-          <p>The project on custom object detection using YOLOv7 and gender classification aimed to develop a deep learning model that can detect and classify objects in images or videos. The model was trained using the YOLOv7 architecture and a dataset of images that were manually labeled for object detection.</p>
-          <!-- Icons Container -->
-          <div class="icons-container">
-            <!-- GitHub Link -->
-            <a href="https://github.com/MayukhaMandya/Gender_detection-YOLOv7.git" title="My GitHub Repo" class="icon-link">
-              <i class="fa fa-github"></i>
-            </a>
-            <!-- Publication Link -->
-            <a href="https://pubs.aip.org/aip/acp/article-abstract/3028/1/020023/3302333/Dynamic-gender-recognition-using-Yolov7-with" title="View Publication" class="icon-link">
-              <i class="fa fa-file-text"></i>
-            </a>
+
+        <div class="badge blue">
+          <div class="lanyard-v">
+            <span class="thread left-thread"></span>
+            <span class="thread right-thread"></span>
+          </div>
+          <div class="v-tab"></div>
+          <div class="clip-circle"></div>
+          <div class="badge-card">
+            <img src="img/u.png" alt="University Logo" />
+            <h4>2024 -<br>2026</h4>
+            <p>Masters in CS grad</p>
           </div>
         </div>
-        
-        <div class="portfolio-img">
-          <img src="./img/1.jpg" alt="Gender Classification Image">
-        </div>
       </div>
-      <div class="portfolio-item">
-        <div class="portfolio-info">
-          <h1>Object Detection on CCTV Footage</h1>
-          <p>Object detection with Darknet and YOLOv4. Pretrained weights were used to train the model and track objects. The model detects person, bag, tie, backpacks, and handbags. The model can also be enhanced and customized by training it with various weights.</p>
-          <a href="https://github.com/MayukhaMandya/Objection-Detection-YOLOv4" title="My GitHub Repo">
-            <i class="fa fa-github" style="font-size:34px;color:rgb(8, 8, 8)"></i>
-          </a>
-        </div>
-        <div class="portfolio-img">
-          <img src="./img/img-7.png" alt="CCTV Footage Detection Image">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Portfolio Section -->
+    </section>
 
-<!-- Education Section -->
-<section id="education">
-  <div class="education container">
-    <div class="education-header">
-      <h1 class="section-title">My <span>Education</span></h1>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h2>Present</h2>
-          <h3>Masters in Computer Science</h3>
-          <p>University of Utah</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h2>2020 - 2024</h2>
-          <h3>Bachelor's in Computer Science</h3>
-          <p>BVRIT Hyderabad College of Engineering for Women</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h2>2018 - 2020</h2>
-          <h3>High School</h3>
-          <p>Narayana Junior College</p>
-        </div>
-      </div>
-    </div>
+     
+
+    <!-- === DATA VISUALIZATION GALLERY === -->
+<section id="gallery" class="gallery-section">
+  <h3>Data Visualization Gallery</h3>
+
+  <!-- Filter Buttons -->
+  <div class="gallery-filters">
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-grid">
+    <div class="gallery-item dashboards"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/5f7d8b56-101e-4c2a-98a0-adfb51d73c04.png" alt="Dashboard Example"></div>
+    <div class="gallery-item ml"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/ab_test_dashboard.png" alt="ML Model Graph"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/churn_roc.png" alt="Scatter Plot"></div>
+    <div class="gallery-item dashboards"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/forecast_dashboard.png" alt="Business Analytics Dashboard"></div>
+    <div class="gallery-item ml"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/gpu_vs_cpu.png" alt="Neural Network Diagram"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/loan_kpis.png" alt="Heatmap Visualization"></div>
+    <div class="gallery-item dashboards"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/model_drift.png" alt="Performance Metrics"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/subscriber_clusters.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/img20.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/img21.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/img24.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/img25.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/shap_summary.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/confusion_matrix.png" alt="Cluster Plot"></div>
+    <div class="gallery-item viz"><img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/multivariate_metrics.png" alt="Cluster Plot"></div>
+
   </div>
 </section>
 
-<!-- Publications Section -->
-<section id="publications">
-  <div class="publications container">
-    <div>
-      <h1 class="section-title">My <span>Publications</span></h1>
+  <!--Projects-->
+    <section id="projects" class="projects-section">
+  <h3>My Projects</h3>
+  <div class="projects-container">
+
+    <!-- Project Card -->
+    <div class="project-card-v2">
+      <img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/image.png" alt="Loan Risk Optimization Dashboard" class="project-thumb">
+      <div class="project-content">
+        <h4 class="project-title">Loan Risk Optimization – BMW FS</h4>
+        <p class="project-summary">Built predictive credit-risk models and compliance-ready ETL pipelines across 1200+ dealerships.</p>
+        <a href="https://docs.google.com/document/d/1ucYhEqWoKBoucy6kkf7pviqG60MLdS769qanMQ2HSkQ/edit?usp=sharing" target="_blank" class="view-details-btn">View Report →</a>
+      </div>
     </div>
-    <div class="publications-list">
-      <!-- Add your publication entries here -->
-      <div class="publication-item">
-        <h2>Journal</h2>
-        <h2>A Deep Learning Approach for Enhancing Tuberculosis Classification Leveraging Optimized Sequential AlexNet (OSAN)
-        </h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong></strong>International Journal of Computing and Digital Systems</p>
+      <!-- Project Card -->
+    <div class="project-card-v2">
+      <img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/image copy.png" alt="Loan Risk Optimization Dashboard" class="project-thumb">
+      <div class="project-content">
+        <h4 class="project-title">Machine Learning Forecasting Model Validation System – Maverik.Inc</h4>
+        <p class="project-summary">Developed an automated QA and drift detection framework for validating retail demand forecasts across 750+ stores at Maverik Inc., reducing inventory waste by 50% and deployment incidents by 30%.</p>
+        <a href="https://docs.google.com/document/d/1a9Kj_4qcrTXHO4xWSI6iw0JY_ASqg08pNJjeFGjNU9Q/edit?usp=sharing" target="_blank" class="view-details-btn">View Report →</a>
       </div>
-      <div class="publication-item">
-        <h2>Conference paper</h2>
-
-        <h2>Chestnet-TB: A Novel Approach to Tuberculosis
-          Classification from Chest Radiology Using Modified
-          AlexNet</h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong></strong>Springer</p>
-      </div>
-      <div class="publication-item">
-        <h2>Conference paper</h2>
-
-        <h2>Dynamic gender recognition using YOLOv7 with minimal Frames Per Second</h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong></strong>International Journal of Modern Physics-B</p>
-      </div>
-      <div class="publication-item">
-        <h2>Conference paper</h2>
-
-        <h2>Improved COVID-19 classification with XceptionNet in radiological data</h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong></strong>International Journal of Modern Physics-B</p>
-      </div>
-      <div class="publication-item">
-        <h2>Book Chapter</h2>
-
-        <h2>Process and Applications of Structure Based Drug Design</h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong>Book title:</strong> Artificial Intelligence and Machine Learning in Drug Design and Development.</p>
-      </div>
-      <div class="publication-item">
-        <h2>Book Chapter</h2>
-
-        <h2>Process and Applications of Structure Based Drug Design</h2>
-        <p><strong>Index: </strong>Scopus</p>
-        <p><strong>Book title:</strong> Artificial Intelligence and Machine Learning in Drug Design and Development.</p>
-      </div>
-      <!-- Add more publication items as needed -->
     </div>
+    <div class="project-card-v2">
+      <img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/image copy 3.png" alt="Loan Risk Optimization Dashboard" class="project-thumb">
+      <div class="project-content">
+        <h4 class="project-title">System Reliability Analytics for Medical Imaging</h4>
+        <p class="project-summary">Accelerated MRI processing by 3× and enhanced system reliability through GPU kernel optimization and a custom testing framework for medical imaging pipelines.</p>
+        <a href="https://docs.google.com/document/d/15IpGF9D7xeZ1xinoN9xG18-oPmNf6snho_1ZwQUkzTI/edit?usp=sharing" target="_blank" class="view-details-btn">View Report →</a>
+      </div>
+    </div>
+      <div class="project-card-v2">
+      <img src="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/image copy 4.png" alt="Loan Risk Optimization Dashboard" class="project-thumb">
+      <div class="project-content">
+        <h4 class="project-title">Subscriber Retention & Behavior Modeling</h4>
+        <p class="project-summary">Developed a churn prediction system with 0.84 AUC and behavioral segmentation, enabling targeted retention strategies and product decision support</p>
+        <a href="https://docs.google.com/document/d/1cssxVcEPR-Ylb7G2Pt8QUq7kSS7F1VMdCO0LySkaSgQ/edit?usp=sharing" target="_blank" class="view-details-btn">View Report →</a>
+      </div>
+    </div>
+
+
+    <!-- Duplicate the above for other projects -->
+
   </div>
 </section>
-<!-- End Publications Section -->
+   
 
- 
-<!-- Achievements Section -->
-<section id="my-achievements">
-  <div class="achievements container">
-    <div>
-      <h1 class="section-title">My <span>Achievements</span></h1>
-      <p class="achievements-body">Best Paper Award</p>
-      <p class="achievements-body">BVRITHCON 23-International Conference on Big Data and Virtual Reality, Information and Communication Technologies</p>
-      <p class="achievements-body">December 23, 2023</p>
-      <!-- Add the image with a unique ID for styling and JavaScript -->
-      <img src="./img/img-10.png" alt="img">
-      <p class="achievements-body"></p>
-      <p class="achievements-body">Microsoft Learn Student Ambassador.</p>
-      <p class="achievements-body">Microsoft.</p>
-      <p class="achievements-body">October 1, 2022</p>
-      <img src="./img/img-11.png" alt="img">
-      <p class="achievements-body"></p>
-      <p class="achievements-body">Chaitanya Bharathi Institute of Technology Model United Nations 2022.</p>
-      <p class="achievements-body">Chaitanya Bharathi Institute of Technology.</p>
-      <p class="achievements-body">May 7, 2022</p>
-      <img src="./img/IMG-12.png" alt="img">
+  <script src="app.js"></script>
+  <!-- PROJECT MODAL -->
+<div id="project-modal" class="modal">
+  <div class="modal-content card-purple" id="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title"></h2>
+
+    <div class="modal-tags">
+      <p><strong>Timeline:</strong> <span id="modal-timeline"></span></p>
+      <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
     </div>
+
+    <h3>Objectives</h3>
+    <ul id="modal-objectives"></ul>
+
+    <h3>My Role</h3>
+    <p id="modal-role"></p>
+
+    <h3>Key Results</h3>
+    <ul id="modal-results"></ul>
+
+    <h3>Model Performance</h3>
+    <canvas id="modalChart"></canvas>
+
   </div>
-</section>
-<!-- Resume Section -->
-<section id="resume">
-  <div class="resume container">
-    <div>
-      <h1 class="section-title">My <span>Resume</span></h1>
-      <p class="resume-info">Download my resume to learn more about my education, skills, and experience.</p>
-      <a href="https://drive.google.com/file/d/1agZXsJ0tMLLs-8OkqAFXs_pxTMmqlZxV/view?usp=sharing" class="cta">Download Resume</a>
+</div>
 
-    </div>
-  </div>
-</section>
+    <!-- Resume -->
+    <section id="resume" class="panel">
+      <h3>Resume</h3>
+      <p>Download my résumé:</p>
+      <a href="/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/Mayukha_Mandya_Ammangatambu_Resume copy.pdf" class="resume-btn" target="_blank">Download Resume</a>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+91 8309953804</h2>
-            
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>mandya.mayukha@gmail.com</h2>
-            
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑ Back to Top</button>
+
+<script>
+  // Show button when scrolling down
+  const backToTop = document.getElementById("backToTop");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 </body>
-
 </html>
