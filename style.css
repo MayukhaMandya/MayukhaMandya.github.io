@@ -985,7 +985,7 @@ footer {
   }
 }
 .hero {
-  background-image: url("/Users/mayukhamandya/Documents/GitHub/MayukhaMandya.github.io/img/city.png"); /* update to correct image path */
+  background-image: url("./img/city.png"); /* update to correct image path */
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
